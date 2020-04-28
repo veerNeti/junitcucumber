@@ -12,7 +12,6 @@
         <cucumber-core.version>1.2.5</cucumber-core.version>
         <gherkin.version>2.12.2</gherkin.version>
         <junit.version>4.12</junit.version>
-        <cucumber.report.json.location>${project.build.directory}/cucumber-report/</cucumber.report.json.location>
     </properties>
 
     <dependencies>
