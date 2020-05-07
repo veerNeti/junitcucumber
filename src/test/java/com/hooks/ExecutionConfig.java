@@ -1,17 +1,29 @@
 package com.hooks;
 
-import org.junit.After;
-import org.junit.Before;
 
-public class ExecutionConfig {
+import com.base.BaseTest;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ExecutionConfig extends BaseTest {
+    public static WebDriver driver;
+
     @Before
-    void setup(){
-        System.out.println("I Start HERE" );
+    public void setup() {
+        WebDriverManager.chromedriver( ).setup( );
+        driver = new ChromeDriver( );
+        System.out.println("I Start HERE");
     }
 
     @After
-    void quit(){
-        System.out.println("I Start Quit" );
+    public void quit() {
+        driver.close( );
+        driver.quit( );
+
+        System.out.println("I Start Quit");
     }
 
 }

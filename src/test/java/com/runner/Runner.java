@@ -19,6 +19,7 @@ import org.junit.runner.RunWith;
                         "json:target/cucumber_json_reports/home-page.json",
                         "html:target/home-page-html"
                 },
-        glue = {"com.steps"})
+        glue = {"com.steps",
+                "com.hooks"})
 public class Runner {
 }

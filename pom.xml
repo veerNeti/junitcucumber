@@ -20,11 +20,22 @@
         easy to switch to latest version     -->
         <cucumber.groupId>io.cucumber</cucumber.groupId>
         <cucumber.version>5.6.0</cucumber.version>
-
-
+        <selenium-java.version>4.0.0-alpha-4</selenium-java.version>
+        <webdrivermanager.version>3.8.1</webdrivermanager.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>${webdrivermanager.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium-java.version}</version>
+        </dependency>
+
         <dependency>
             <groupId>${cucumber.groupId}</groupId>
             <artifactId>cucumber-core</artifactId>
@@ -50,11 +61,13 @@
             <scope>test</scope>
         </dependency>
 
-        <dependency>
+   <!--
+   Commenting to avoid conflicts with the latest version of Cucumber imports
+   <dependency>
             <groupId>${gherkin.groupId}</groupId>
             <artifactId>gherkin</artifactId>
             <version>${gherkin.version}</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>junit</groupId>
