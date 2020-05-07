@@ -1,47 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>junitcucumbersample</groupId>
-    <artifactId>junitcucumbersample</artifactId>
+    <groupId>junitcucumberskeleton</groupId>
+    <artifactId>junitcucumberskeleton</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <cucumber-core.version>1.2.5</cucumber-core.version>
         <gherkin.version>2.12.2</gherkin.version>
         <junit.version>4.12</junit.version>
+        <gherkin.groupId>info.cukes</gherkin.groupId>
+
+        <!--        easy to switch to latest version-->
+        <!-- <cucumber.version>1.2.5</cucumber.version>
+         <cucumber.groupId>info.cukes</cucumber.groupId>-->
+        <!--
+        easy to switch to latest version     -->
+        <cucumber.groupId>io.cucumber</cucumber.groupId>
+        <cucumber.version>5.6.0</cucumber.version>
+
+
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>${cucumber.groupId}</groupId>
             <artifactId>cucumber-core</artifactId>
-            <version>${cucumber-core.version}</version>
+            <version>${cucumber.version}</version>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>${cucumber.groupId}</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>${cucumber-core.version}</version>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>${cucumber.groupId}</groupId>
             <artifactId>cucumber-jvm</artifactId>
-            <version>${cucumber-core.version}</version>
+            <version>${cucumber.version}</version>
             <type>pom</type>
         </dependency>
 
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>${cucumber.groupId}</groupId>
             <artifactId>cucumber-junit</artifactId>
-            <version>${cucumber-core.version}</version>
+            <version>${cucumber.version}</version>
             <scope>test</scope>
         </dependency>
 
         <dependency>
-            <groupId>info.cukes</groupId>
+            <groupId>${gherkin.groupId}</groupId>
             <artifactId>gherkin</artifactId>
             <version>${gherkin.version}</version>
         </dependency>
@@ -80,5 +90,5 @@
 
         </plugins>
     </build>
-    
+
 </project>
