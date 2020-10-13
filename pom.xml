@@ -10,7 +10,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <gherkin.version>2.12.2</gherkin.version>
-        <junit.version>4.12</junit.version>
+        <junit.version>4.13.1</junit.version>
         <gherkin.groupId>info.cukes</gherkin.groupId>
 
         <!--        easy to switch to latest version-->
